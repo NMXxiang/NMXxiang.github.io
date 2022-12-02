@@ -28,7 +28,7 @@
 
   
 
-  <title>NMXxiang</title>
+  <title>孤独摇滚第七集 | NMXxiang</title>
 
   
 
@@ -51,7 +51,7 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container">
+<header class="header-container post">
   
     <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
   
@@ -101,36 +101,101 @@
 
   
   
-
-  
-  
     <div class="header-content">
-      <div class="post-text layout-block layout-padding">
-        <h1 class="title-wrap"></h1>
-        
+      <div class="post-text layout-block">
+        <div class="layout-margin">
+          <h1 class="title-wrap">孤独摇滚第七集</h1>
+          <h2 class="title-sub-wrap">
+            <strong>时之沙</strong>
+            <span>发布于</span>
+            <time  class="article-date" datetime="2022-12-02T12:51:39.000Z" itemprop="datePublished">2022-12-02</time>
+          </h2>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/categories/%E5%8A%A8%E6%BC%AB/">📒 动漫</a></li>
+  
+</ul>
+          <ul class="wrap-list dark">
+  
+    <li><a href="/tags/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A/">🏷️ 孤独摇滚</a></li>
+  
+</ul>
+        </div>
       </div>
     </div>
+  
+
+  
   
   
 </header>
 
-    <!-- 分页(其他自定义页面) -->
+    <!-- 文章 -->
 
-<!-- 自定义页面 -->
-
+<!-- 文章内容 -->
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
+      
+      
+      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1484336476&auto=1&height=66"></iframe>
+        <h2 id="由ACG翻译"><a href="#由ACG翻译" class="headerlink" title="由ACG翻译"></a>由ACG翻译</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://acg.rip/t/268298">动漫源</a></p>
+</blockquote>
+<div class="dplayer-box" data-url='http://rm9eljenu.hn-bkt.clouddn.com/dongma/touxiang/%5BDMG%5D%5BBOCCHI_THE_ROCK%21%5D%5B07%5D%5B1080P%5D%5BGB%5D.mp4' data-pic='http://rm9eljenu.hn-bkt.clouddn.com/dongma/touxiang/p2880363555.png' ></div>
+
       </section>
 
       
       
+        <nav class="article-nav">
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2022/12/02/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%E7%AC%AC%E5%85%AD%E9%9B%86/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">孤独摇滚第六集</h2>
+        </a>
+      
+      <div class="card-text--row">Newer</div>
+    </div>
+  </article>
+</div>
+          
+          
+            <div class="article-nav-item layout-padding">
+  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
+    
+    <div class="card-text">
+      
+        <a href="/2022/12/02/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%E7%AC%AC%E5%85%AB%E9%9B%86/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">孤独摇滚第八集</h2>
+        </a>
+      
+      <div class="card-text--row">Older</div>
+    </div>
+  </article>
+</div>
+          
+        </nav>
+      
 
-      
-      
+      <section class="page-message-container layout-padding">
+        
+
+
+  
+  
+
+  
+  
+
+
+      </section>
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -167,6 +232,8 @@
     </div>
   </div>
 </section>
+
+      
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -224,7 +291,6 @@
     </div>
   </article>
 </div>
-
 
     <!-- footer container -->
 <footer id="footer" class="footer">
@@ -312,6 +378,41 @@
 
 
 <!-- dplayer -->
+
+
+<!-- dplayer 视频 start -->
+<script type="text/javascript" src="https://unpkg.com/hls.js@1.0.1/dist/hls.js"></script>
+<script type="text/javascript" src="https://unpkg.com/dplayer@1.25.1/dist/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer-box");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let pic = el.dataset.pic;
+      let subtitle = el.dataset.subtitle;
+
+      let options = {
+        container: el,
+        video: { url: url, pic: pic },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      }
+
+      if (subtitle) {
+        options.subtitle = {
+          url: el.dataset.subtitle,
+        }
+      }
+      new DPlayer(options);
+    });
+  }
+</script>
+<!-- dplayer 视频 end -->
+
 
 
 
