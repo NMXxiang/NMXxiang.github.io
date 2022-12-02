@@ -28,7 +28,7 @@
 
   
 
-  <title>插入图片，音频和视频 | NMXxiang</title>
+  <title>NMXxiang</title>
 
   
 
@@ -51,7 +51,7 @@
   <div class="root-container">
     
 <!-- header container -->
-<header class="header-container post">
+<header class="header-container">
   
     <div class="post-image" style="background-image: url(https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg)"></div>
   
@@ -101,109 +101,50 @@
 
   
   
-    <div class="header-content">
-      <div class="post-text layout-block">
-        <div class="layout-margin">
-          <h1 class="title-wrap">插入图片，音频和视频</h1>
-          <h2 class="title-sub-wrap">
-            <strong>时之沙</strong>
-            <span>发布于</span>
-            <time  class="article-date" datetime="2022-12-02T07:50:15.000Z" itemprop="datePublished">2022-12-02</time>
-          </h2>
-          <ul class="wrap-list dark">
-  
-    <li><a href="/categories/%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%95/">📒 分类测试</a></li>
-  
-</ul>
-          <ul class="wrap-list dark">
-  
-    <li><a href="/tags/%E5%88%86%E7%B1%BB%E6%B5%8B%E8%AF%95/">🏷️ 分类测试</a></li>
-  
-</ul>
-        </div>
-      </div>
-    </div>
-  
 
   
+  
+    <div class="header-content">
+      <div class="post-text layout-block layout-padding">
+        <h1 class="title-wrap"></h1>
+        
+      </div>
+    </div>
   
   
 </header>
 
-    <!-- 文章 -->
+    <!-- 分页(其他自定义页面) -->
 
-<!-- 文章内容 -->
+<!-- 自定义页面 -->
+
 <div class="body-container">
   <article class="content-container layout-block post-container">
     <div class="article-info">
       
-      
-      
-      
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
         
-    <figure class="figure-image">
-      <img src="https://qiniu.sukoshi.xyz/src/images/68686407_p0.jpg" alt="带描述带图片" loading="lazy" />
-      <figcaption>带描述带图片</figcaption>
-    </figure>
-  
-
-<div class="aplayer-box" data-url='https://qiniu.sukoshi.xyz/public/music/鹿乃 - アイロニ.mp3' data-name='アイロニ' data-artist='鹿乃' data-cover='https://qiniu.sukoshi.xyz/public/music/鹿乃 - アイロニ.jpg' data-lrc='https://qiniu.sukoshi.xyz/public/music/鹿乃 - アイロニ.lrc' data-lrcType='3' ></div>
-
-<div class="dplayer-box" data-url='https://qiniu.sukoshi.xyz/video/%E7%BE%8E.mp4' data-pic='https://qiniu.sukoshi.xyz/video/%E7%BE%8E.mp4?vframe/jpg/offset/10' ></div>
-
-
-
       </section>
 
       
       
-        <nav class="article-nav">
+        <section class="page-link-container">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2022/12/02/links/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">links</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
+            <div class="link-item layout-padding">
+              <a href="www.baidu.com" title="百度" class="content-padding--primary soft-size--primary soft-style--box" target="_blank" rel="noopener noreferrer">
+                
+                <div>
+                  <h4 class="text-ellipsis">百度</h4>
+                  
+                </div>
+              </a>
+            </div>
           
-          
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2022/12/02/%E6%B5%8B%E8%AF%952/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">测试2</h2>
-        </a>
-      
-      <div class="card-text--row">Older</div>
-    </div>
-  </article>
-</div>
-          
-        </nav>
+        </section>
       
 
-      <section class="page-message-container layout-padding">
-        
-
-
-  
-  
-
-  
-  
-
-
-      </section>
+      
+      
     </div>
     <div class="widget-info">
       <section class="widget-author widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -240,8 +181,6 @@
     </div>
   </div>
 </section>
-
-      
 
       
 <section class="widet-notice widget-item layout-margin content-padding--primary soft-size--large soft-style--box">
@@ -293,6 +232,7 @@
     </div>
   </article>
 </div>
+
 
     <!-- footer container -->
 <footer id="footer" class="footer">
@@ -351,70 +291,7 @@
   <!-- aplayer -->
 
 
-  <!-- aplayer 音频 start -->
-  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
-  <script type="text/javascript" src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
-  <script type="text/javascript">
-    const aplayer = document.querySelectorAll(".aplayer-box");
-    aplayer && initaplayer(aplayer);
-    function initaplayer(els) {
-      let elsArr = Array.from(els);
-      elsArr.forEach(el => {
-        let params = {
-          container: el,
-          audio: { ...el.dataset },
-          theme: "#b7daff",
-          autoplay: false,
-          loop: false,
-          mutex: true,
-        }
-        if (el.dataset.lrc) {
-          params['lrcType'] = 3
-        }
-        new APlayer(params);
-      });
-    }
-  </script>
-  <!-- aplayer 音频 end -->
-  
-
-
 <!-- dplayer -->
-
-
-<!-- dplayer 视频 start -->
-<script type="text/javascript" src="https://unpkg.com/hls.js@1.0.1/dist/hls.js"></script>
-<script type="text/javascript" src="https://unpkg.com/dplayer@1.25.1/dist/DPlayer.min.js"></script>
-<script type="text/javascript">
-  const dplayer = document.querySelectorAll(".dplayer-box");
-  dplayer && initDPlayer(dplayer);
-  function initDPlayer(els) {
-    let elsArr = Array.from(els);
-    elsArr.forEach(el => {
-      let url = el.dataset.url;
-      let pic = el.dataset.pic;
-      let subtitle = el.dataset.subtitle;
-
-      let options = {
-        container: el,
-        video: { url: url, pic: pic },
-        theme: "#b7daff",
-        autoplay: false,
-        loop: false,
-        mutex: true,
-      }
-
-      if (subtitle) {
-        options.subtitle = {
-          url: el.dataset.subtitle,
-        }
-      }
-      new DPlayer(options);
-    });
-  }
-</script>
-<!-- dplayer 视频 end -->
-
 
 
 
