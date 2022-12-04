@@ -28,7 +28,7 @@
 
   
 
-  <title>孤独摇滚第三集 | NMXxiang</title>
+  <title>时间复杂度 | NMXxiang</title>
 
   
 
@@ -104,20 +104,20 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">孤独摇滚第三集</h1>
+          <h1 class="title-wrap">时间复杂度</h1>
           <h2 class="title-sub-wrap">
             <strong>时之沙</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2022-12-02T12:52:17.000Z" itemprop="datePublished">2022-12-02</time>
+            <time  class="article-date" datetime="2022-12-04T12:55:16.000Z" itemprop="datePublished">2022-12-04</time>
           </h2>
           <ul class="wrap-list dark">
   
-    <li><a href="/categories/%E5%8A%A8%E6%BC%AB/">📒 动漫</a></li>
+    <li><a href="/categories/%E7%BC%96%E7%A8%8B/">📒 编程</a></li>
   
 </ul>
           <ul class="wrap-list dark">
   
-    <li><a href="/tags/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A/">🏷️ 孤独摇滚</a></li>
+    <li><a href="/tags/%E7%AE%97%E6%B3%95/">🏷️ 算法</a></li>
   
 </ul>
         </div>
@@ -141,10 +141,62 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h2 id="由ACG翻译"><a href="#由ACG翻译" class="headerlink" title="由ACG翻译"></a>由ACG翻译</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://acg.rip/t/268298">动漫源</a></p>
+        <p>##统计算法运行时间</p>
+<hr>
+<p>运行时间能够<strong>直观且准确</strong>地体现出算法的效率水平</p>
+<hr>
+<p>####准确预估一段代码的运行时间需要：</p>
+<blockquote>
+<ol>
+<li>首先需要<strong>确定运行平台</strong> 。</li>
+<li>评估<strong>各种计算操作的所需运行时间</strong>。</li>
+<li>根据代码<strong>统计所有计算操作的数量</strong>，并将所有操作的执行时间求和，即可得到运行时间。</li>
+</ol>
 </blockquote>
-<div class="dplayer-box" data-url='http://rm9eljenu.hn-bkt.clouddn.com/dongma/touxiang/%5BDMG%5D%5BBOCCHI_THE_ROCK%21%5D%5B03%5D%5B1080P%5D%5BGB%5D.mp4' data-pic='http://rm9eljenu.hn-bkt.clouddn.com/dongma/touxiang/p2880363555.png' ></div>
+<p><em>但实际上， 统计算法的运行时间</em><strong>既不合理也不现实</strong><em>。 首先，我们不希望预估时间和运行平台绑定，毕竟算法需要跑在各式各样的平台之上。其次，我们很难获知每一种操作的运行时间，这为预估过程带来了极大的难度</em></p>
+<hr>
+<p>##统计时间增长趋势</p>
+<hr>
+<p>其统计的不是算法运行时间，而是<strong>算法运行时间随着数据量变大时的增长趋势</strong></p>
+<hr>
+<p>####时间复杂度分析的做法的好处:</p>
+<blockquote>
+<ol>
+<li><strong>时间复杂度可以有效评估算法效率</strong>。</li>
+<li><strong>时间复杂度分析将统计「计算操作的运行时间」简化为统计「计算操作的数量」</strong>。<br>####时间复杂度分析的做法的不足:</li>
+</ol>
+<p><strong>存在一定的局限性</strong></p>
+</blockquote>
+<p><em>计算时间复杂度仍然是评判算法效率的最有效、最常用方法。</em></p>
+<hr>
+<p>##函数渐进上界</p>
+<hr>
+<p>计算渐进上界就是在找一个函数 <em>f(n)<em>，使得在</em>n</em>趋向于无穷大时<em>T(n)<em>和</em>f(n)<em>处于相同的增长级别（仅相差一个常数项</em>c</em>的倍数。</p>
+<hr>
+<p>###推算方法:</p>
+<ol>
+<li><strong>统计操作数量</strong><blockquote>
+<ol>
+<li>跳过数量与<em>n</em>无关的操作。</li>
+<li>省略所有系数。</li>
+<li>循环嵌套时使用乘法。</li>
+</ol>
+</blockquote>
+</li>
+<li><strong>判断渐进上界</strong><blockquote>
+<p>时间复杂度由多项式*T(n)*中最高阶的项来决定。<br>系数无法撼动阶数</p>
+</blockquote>
+</li>
+</ol>
+<p>设输入数据大小为  ，常见的时间复杂度类型有（从低到高排列）</p>
+<p>常数阶 &lt; 对数阶 &lt; 线性阶 &lt; 线性对数阶 &lt; 平方阶指数阶 &lt; 阶乘阶</p>
+<p>##最差、最佳、平均时间复杂度</p>
+<hr>
+<p>「函数渐进上界」使用大 O记号表示，代表「最差时间复杂度」。与之对应，「函数渐进下界」用  记号∩（Omega Notation）来表示，代表「最佳时间复杂度」。</p>
+<hr>
+<p><em>我们在实际应用中很少使用「最佳时间复杂度」，因为往往只有很小概率下才能达到，会带来一定的误导性。反之，「最差时间复杂度」最为实用，因为它给出了一个 “效率安全值” ，让我们可以放心地使用算法。</em></p>
+<p><strong>「平均时间复杂度」可以体现算法在随机输入数据下的运行效率，用Ø记号（Theta Notation）来表示。</strong></p>
+
       </section>
 
       
@@ -156,8 +208,8 @@
     
     <div class="card-text">
       
-        <a href="/2022/12/02/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%E7%AC%AC%E4%BA%8C%E9%9B%86/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">孤独摇滚第二集</h2>
+        <a href="/2022/12/04/%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">空间复杂度</h2>
         </a>
       
       <div class="card-text--row">Newer</div>
@@ -171,8 +223,8 @@
     
     <div class="card-text">
       
-        <a href="/2022/12/02/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%E7%AC%AC%E5%9B%9B%E9%9B%86/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">孤独摇滚第四集</h2>
+        <a href="/2022/12/02/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%E7%AC%AC%E4%B8%80%E9%9B%86/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">孤独摇滚第一集</h2>
         </a>
       
       <div class="card-text--row">Older</div>
@@ -354,70 +406,7 @@
   <!-- aplayer -->
 
 
-  <!-- aplayer 音频 start -->
-  <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
-  <script type="text/javascript" src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
-  <script type="text/javascript">
-    const aplayer = document.querySelectorAll(".aplayer-box");
-    aplayer && initaplayer(aplayer);
-    function initaplayer(els) {
-      let elsArr = Array.from(els);
-      elsArr.forEach(el => {
-        let params = {
-          container: el,
-          audio: { ...el.dataset },
-          theme: "#b7daff",
-          autoplay: false,
-          loop: false,
-          mutex: true,
-        }
-        if (el.dataset.lrc) {
-          params['lrcType'] = 3
-        }
-        new APlayer(params);
-      });
-    }
-  </script>
-  <!-- aplayer 音频 end -->
-  
-
-
 <!-- dplayer -->
-
-
-<!-- dplayer 视频 start -->
-<script type="text/javascript" src="https://unpkg.com/hls.js@1.0.1/dist/hls.js"></script>
-<script type="text/javascript" src="https://unpkg.com/dplayer@1.25.1/dist/DPlayer.min.js"></script>
-<script type="text/javascript">
-  const dplayer = document.querySelectorAll(".dplayer-box");
-  dplayer && initDPlayer(dplayer);
-  function initDPlayer(els) {
-    let elsArr = Array.from(els);
-    elsArr.forEach(el => {
-      let url = el.dataset.url;
-      let pic = el.dataset.pic;
-      let subtitle = el.dataset.subtitle;
-
-      let options = {
-        container: el,
-        video: { url: url, pic: pic },
-        theme: "#b7daff",
-        autoplay: false,
-        loop: false,
-        mutex: true,
-      }
-
-      if (subtitle) {
-        options.subtitle = {
-          url: el.dataset.subtitle,
-        }
-      }
-      new DPlayer(options);
-    });
-  }
-</script>
-<!-- dplayer 视频 end -->
-
 
 
 
